@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <h2>Add Book</h2>
+    <form th:action="@{books/save}" method="post" th:object="${book}">
+    <label>Title:</label>
+    <input type="text" th:field="*{title}" required><br>
+    <label>Author:</label>
+    <input type="text" th:field="*{author}" required><br>
+    <label>ISBN:</label>
+    <input type="text" th:field="*{isbn}" required><br>
+    <label>Available:</label>
+    <input type="checkbox" th:field=*{available}"><br>
+    <button type="submit">Save</button>
+    </form>
+    
+    <a href="/books">Back to Lists</a>
+</body>
+</html>
